@@ -4,6 +4,7 @@
   "description": "simple domain splitter library",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "ci": "npm run lint && npm run test",
     "lint": "tslint -p tsconfig.json -c tslint.json src/**/*.ts",
     "test": "jest"

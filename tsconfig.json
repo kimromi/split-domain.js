@@ -2,6 +2,10 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
+    "lib": [
+      "dom",
+      "es7"
+    ],
     "moduleResolution": "node",
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

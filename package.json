@@ -1,6 +1,6 @@
 {
   "name": "split-domain",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "simple domain splitter library",
   "main": "lib/splitDomain.js",
   "types": "lib/splitDomain.d.ts",

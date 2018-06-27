@@ -2,7 +2,19 @@
   "name": "split-domain",
   "version": "0.1.0",
   "description": "simple domain splitter library",
-  "main": "index.js",
+  "main": "lib/splitDomain.js",
+  "types": "lib/splitDomain.d.ts",
+  "files": [
+    "MIT-LICENSE",
+    "README.md",
+    "tsconfig.json",
+    "lib/",
+    "src/"
+  ],
+  "directories": {
+    "lib": "./lib",
+    "src": "./src"
+  },
   "scripts": {
     "build": "tsc",
     "ci": "npm run lint && npm run test",

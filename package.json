@@ -1,0 +1,39 @@
+{
+  "name": "split-domain",
+  "version": "0.1.0",
+  "description": "simple domain splitter library",
+  "main": "index.js",
+  "scripts": {
+    "ci": "npm run lint && npm run test",
+    "lint": "tslint -p tsconfig.json -c tslint.json src/**/*.ts",
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "\\.test\\.ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kimromi/split-domain.js.git"
+  },
+  "author": "kimromi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kimromi/split-domain.js/issues"
+  },
+  "homepage": "https://github.com/kimromi/split-domain.js#readme",
+  "devDependencies": {
+    "@types/jest": "^23.1.2",
+    "jest": "^23.2.0",
+    "ts-jest": "^22.4.6",
+    "tslint": "^5.10.0",
+    "tslint-microsoft-contrib": "^5.0.3",
+    "typescript": "^2.9.2"
+  }
+}

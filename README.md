@@ -1,7 +1,12 @@
 split-domain.js
 ===============
 
-Simple domain splitter.
+Simple domain name splitter.
+
+<a href="https://www.npmjs.com/package/split-domain" title="npm"><img src="http://img.shields.io/npm/v/split-domain.svg?style=flat-square"></a>
+<a href="https://travis-ci.org/kimromi/split-domain.js" title="travis"><img src="https://img.shields.io/travis/kimromi/split-domain.js.svg?style=flat-square"></a>
+<a href="https://coveralls.io/github/kimromi/split-domain.js" title="coveralls"><img src="https://img.shields.io/coveralls/kimromi/split-domain.js.svg?style=flat-square"></a>
+<a href="https://github.com/kimromi/split-domain.js/blob/master/MIT-LICENSE" title="MIT License"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square"></a>
 
 Installation
 ------------

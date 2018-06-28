@@ -135,4 +135,16 @@ describe('splitDomain', () => {
     expect(domain.sld).toBe('')
     expect(domain.tld).toBe('')
   })
+
+  it('is undefined', () => {
+    let domain: SplittedDomain = splitDomain(undefined)
+    expect(domain.subDomain).toBe('')
+    expect(domain.sld).toBe('')
+    expect(domain.tld).toBe('')
+
+    domain = splitDomain(null)
+    expect(domain.subDomain).toBe('')
+    expect(domain.sld).toBe('')
+    expect(domain.tld).toBe('')
+  })
 })

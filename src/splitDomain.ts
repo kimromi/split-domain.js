@@ -114,9 +114,13 @@ const ccTldWithSubDomains: string[] = [
   '沖縄.jp'
 ]
 
-export default function splitDomain(domainStr: string): SplittedDomain {
-  const splitted = domainStr.split('.').reverse()
+export default function splitDomain(domainStr?: string | null): SplittedDomain {
   const domain: SplittedDomain = { subDomain: '', sld: '', tld: '' }
+
+  if (!domainStr) {
+    return domain
+  }
+  const splitted = domainStr.split('.').reverse()
 
   if (splitted.length === 0) {
     return domain

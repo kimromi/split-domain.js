@@ -32,6 +32,16 @@ const domain = splitDomain('sub.example.com')
 domain.subDomain // => 'sub'
 domain.sld       // => 'example'
 domain.tld       // => 'com'
+
+const domain = splitDomain('example.co.jp')
+domain.subDomain // => ''
+domain.sld       // => 'example'
+domain.tld       // => 'co.jp'
+
+const domain = splitDomain('sub.example.co.jp')
+domain.subDomain // => 'sub'
+domain.sld       // => 'example'
+domain.tld       // => 'co.jp'
 ```
 
 Contribution

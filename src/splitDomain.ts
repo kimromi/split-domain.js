@@ -128,6 +128,7 @@ export default function splitDomain(domainStr: string): SplittedDomain {
 
   const firstAndSecontLevelDomain = splitted.slice(0, 2).reverse().filter((label) => label).join('.')
   if (ccTldWithSubDomains.includes(firstAndSecontLevelDomain)) {
+    // ["uk", "co", "sld"] => ["co.uk", "sld"]
     splitted[0] = firstAndSecontLevelDomain
     splitted.splice(1, 1)
   }

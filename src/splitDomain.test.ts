@@ -13,6 +13,29 @@ describe('splitDomain', () => {
     expect(domain.tld).toBe('co.jp')
   })
 
+  it('is Japan domain', () => {
+    // JP domain
+    let domain = splitDomain('日本語.com')
+    expect(domain.subDomain).toBe('')
+    expect(domain.sld).toBe('日本語')
+    expect(domain.tld).toBe('com')
+
+    domain = splitDomain('日本語.co.jp')
+    expect(domain.subDomain).toBe('')
+    expect(domain.sld).toBe('日本語')
+    expect(domain.tld).toBe('co.jp')
+
+    domain = splitDomain('日本語.tokyo.jp')
+    expect(domain.subDomain).toBe('')
+    expect(domain.sld).toBe('日本語')
+    expect(domain.tld).toBe('tokyo.jp')
+
+    domain = splitDomain('日本語.東京.jp')
+    expect(domain.subDomain).toBe('')
+    expect(domain.sld).toBe('日本語')
+    expect(domain.tld).toBe('東京.jp')
+  })
+
   it('has sub domain', () => {
     let domain: SplittedDomain = splitDomain('sub1.example.com')
     expect(domain.subDomain).toBe('sub1')

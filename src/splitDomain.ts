@@ -117,7 +117,7 @@ const ccTldWithSubDomains: string[] = [
 export default function splitDomain(domainStr?: string | null): SplittedDomain {
   const domain: SplittedDomain = { subDomain: '', sld: '', tld: '' }
 
-  if (!domainStr) {
+  if (domainStr === undefined || domainStr === null) {
     return domain
   }
   const splitted = domainStr.split('.').reverse()

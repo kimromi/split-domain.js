@@ -1,4 +1,4 @@
-export interface SplittedDomain {
+export interface SplitDomain {
   subDomain: string
   sld: string
   tld: string
@@ -114,32 +114,32 @@ const ccTldWithSubDomains: string[] = [
   '沖縄.jp'
 ]
 
-export default function splitDomain(domainStr?: string | null): SplittedDomain {
-  const domain: SplittedDomain = { subDomain: '', sld: '', tld: '' }
+export default function splitDomain(domainStr?: string | null): SplitDomain {
+  const domain: SplitDomain = { subDomain: '', sld: '', tld: '' }
 
   if (domainStr === undefined || domainStr === null) {
     return domain
   }
-  const splitted = domainStr.split('.').reverse()
+  const split = domainStr.split('.').reverse()
 
-  if (splitted.length === 0) {
+  if (split.length === 0) {
     return domain
   }
-  if (splitted.length === 1) {
+  if (split.length === 1) {
     domain.sld = domainStr
     return domain
   }
 
-  const firstAndSecontLevelDomain = splitted.slice(0, 2).reverse().filter((label) => label).join('.')
+  const firstAndSecontLevelDomain = split.slice(0, 2).reverse().filter((label) => label).join('.')
   if (ccTldWithSubDomains.includes(firstAndSecontLevelDomain)) {
     // ["uk", "co", "sld"] => ["co.uk", "sld"]
-    splitted[0] = firstAndSecontLevelDomain
-    splitted.splice(1, 1)
+    split[0] = firstAndSecontLevelDomain
+    split.splice(1, 1)
   }
 
-  domain.subDomain = splitted.slice(2).reverse().filter((label) => label).join('.')
-  domain.sld = splitted[1]
-  domain.tld = splitted[0]
+  domain.subDomain = split.slice(2).reverse().filter((label) => label).join('.')
+  domain.sld = split[1]
+  domain.tld = split[0]
 
   return domain
 }

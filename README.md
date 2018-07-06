@@ -44,6 +44,31 @@ domain.sld       // => 'example'
 domain.tld       // => 'co.jp'
 ```
 
+TypeSctipt
+
+```javascript
+import splitDomain, { SplitDomain } from 'split-domain'
+
+const domain: SplitDomain = splitDomain('example.com')
+domain.subDomain // => ''
+domain.sld       // => 'example'
+domain.tld       // => 'com'
+
+const domain: SplitDomain = splitDomain('sub.example.com')
+domain.subDomain // => 'sub'
+domain.sld       // => 'example'
+domain.tld       // => 'com'
+
+const domain: SplitDomain = splitDomain('example.co.jp')
+domain.subDomain // => ''
+domain.sld       // => 'example'
+domain.tld       // => 'co.jp'
+
+const domain: SplitDomain = splitDomain('sub.example.co.jp')
+domain.subDomain // => 'sub'
+domain.sld       // => 'example'
+domain.tld       // => 'co.jp'
+```
 Contribution
 ------------
 

@@ -1,8 +1,8 @@
-import splitDomain, { SplittedDomain } from '../src/splitDomain'
+import splitDomain, { SplitDomain } from '../src/splitDomain'
 
 describe('splitDomain', () => {
   it('is simple domain', () => {
-    let domain: SplittedDomain = splitDomain('example.com')
+    let domain: SplitDomain = splitDomain('example.com')
     expect(domain.subDomain).toBe('')
     expect(domain.sld).toBe('example')
     expect(domain.tld).toBe('com')
@@ -37,7 +37,7 @@ describe('splitDomain', () => {
   })
 
   it('has sub domain', () => {
-    let domain: SplittedDomain = splitDomain('sub1.example.com')
+    let domain: SplitDomain = splitDomain('sub1.example.com')
     expect(domain.subDomain).toBe('sub1')
     expect(domain.sld).toBe('example')
     expect(domain.tld).toBe('com')
@@ -59,7 +59,7 @@ describe('splitDomain', () => {
   })
 
   it('is only sld', () => {
-    let domain: SplittedDomain = splitDomain('example.')
+    let domain: SplitDomain = splitDomain('example.')
     expect(domain.subDomain).toBe('')
     expect(domain.sld).toBe('example')
     expect(domain.tld).toBe('')
@@ -81,7 +81,7 @@ describe('splitDomain', () => {
   })
 
   it('is only tld', () => {
-    let domain: SplittedDomain = splitDomain('.com')
+    let domain: SplitDomain = splitDomain('.com')
     expect(domain.subDomain).toBe('')
     expect(domain.sld).toBe('')
     expect(domain.tld).toBe('com')
@@ -113,7 +113,7 @@ describe('splitDomain', () => {
   })
 
   it('is only dot domain', () => {
-    let domain: SplittedDomain = splitDomain('.')
+    let domain: SplitDomain = splitDomain('.')
     expect(domain.subDomain).toBe('')
     expect(domain.sld).toBe('')
     expect(domain.tld).toBe('')
@@ -130,14 +130,14 @@ describe('splitDomain', () => {
   })
 
   it('is blank', () => {
-    const domain: SplittedDomain = splitDomain('')
+    const domain: SplitDomain = splitDomain('')
     expect(domain.subDomain).toBe('')
     expect(domain.sld).toBe('')
     expect(domain.tld).toBe('')
   })
 
   it('is undefined', () => {
-    let domain: SplittedDomain = splitDomain(undefined)
+    let domain: SplitDomain = splitDomain(undefined)
     expect(domain.subDomain).toBe('')
     expect(domain.sld).toBe('')
     expect(domain.tld).toBe('')

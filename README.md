@@ -46,7 +46,7 @@ domain.tld       // => 'co.jp'
 
 TypeSctipt
 
-```javascript
+```typescript
 import splitDomain, { SplitDomain } from 'split-domain'
 
 const domain: SplitDomain = splitDomain('example.com')
@@ -69,6 +69,7 @@ domain.subDomain // => 'sub'
 domain.sld       // => 'example'
 domain.tld       // => 'co.jp'
 ```
+
 Contribution
 ------------
 
